@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta http-equiv="Refresh" content="60" ;>
+    <meta name="google-site-verification" content="_vs2QECfebTQVYGU-dKWDtmIiuF--DXN9fnx2lcm0FM" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+    <title>COVID-19 TRACKER</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="css/style.css">
+
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="wrapper">
+        <h1 style="text-align: center;color: white;padding: 10px;">COVID-19 LIVE TRACKER
+            <hr><span id="today" style="font-size: 15px;"></span>
+            <!--            <hr><span id="yesterday"></span>-->
+        </h1>
+        <br>
+        <div class="statistic">
+
+            <div class="total_case_box">
+                <h2>Total Cases</h2>
+                <p id="total_cases" style="font-weight: bold;"></p>
+            </div><br>
+
+            <div class="box_wrapper">
+                <div class="box">
+                    <h2>Total Death</h2>
+                    <p id="total_death"> </p>
+                </div>
+
+                <div class="box" style="background-color:olive;color: white;">
+                    <h2>Total Recovery</h2>
+                    <p id="total_recovered"> </p>
+                </div>
+
+                <div class="box">
+                    <h2>New case</h2>
+                    <p id="new_case"> </p>
+                </div>
+
+                <div class="box" style="background-color: red;color: white;">
+                    <h2>New Death</h2>
+                    <p id="new_death"> </p>
+                </div>
+            </div>
+
+            <table id="countries_stat">
+                <tr>
+                    <th>Country</th>
+                    <th>Cases</th>
+                    <th>Deaths</th>
+<!--                    <th>serious CASES</th>-->
+                    <th>Recovered</th>
+                    <th>New Cases</th>
+                    <th>New Death</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <span class="openNav" onclick="openNav()">&#9776;</span>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div style="padding: 20px;">
+            <details style="color: aliceblue;">
+                <summary> Coronavirus Symptoms (COVID-19)</summary>
+                <ul>
+                    <li> Fever </li>
+                    <li> Cough </li>
+                    <li> Shortness of breath or difficulty breathing </li>
+                    <li> Chills </li>
+                    <li> Repeated shaking with chills </li>
+                    <li> Muscle pain </li>
+                    <li> Headache </li>
+                    <li> Sore throat </li>
+                    <li> New loss of taste or smell </li>
+                </ul>
+
+            </details>
+
+            <details style="color: aliceblue;">
+                <summary> Incubation Period</summary>
+                <ul>
+                    <li> 2 - 14 days</li>
+                    <li> Possible outliers: 0 - 27 days</li>
+
+                </ul>
+            </details>            
+            
+            
+            <details style="color: aliceblue;">
+                <summary> Mortality Rate</summary>
+                <ul>
+                    <li>
+
+                        The number of actual cases. We need to know the number of actual cases (not merely the reported ones, which are typically only a small portion of the actual ones) that have already had an outcome (positive or negative: recovery or death), not the current cases that still have to resolve (the case sample shall contain zero active cases and include only "closed" cases). </li>
+                    
+                    <li>The number of actual deaths related to the closed cases examined above.</li>
+                    
+                    <li>Considering that a large number of cases are asymptomatic (or present with very mild symptoms) and that testing has not been performed on the entire population, only a fraction of the SARS-CoV-2 infected population is detected, confirmed through a laboratory test, and officially reported as a COVID-19 case. The number of actual cases is therefore estimated to be at several multiples above the number of reported cases. The number of deaths also tends to be underestimated, as some patients are not hospitalized and not tested.</li>
+
+                </ul>
+            </details>
+        
+            
+            <details style="color: aliceblue;">
+                <summary>Age, Sex, and existing conditions of Deaths</summary>
+                <center> <img src="age%20.png" width="320px"> </center>
+            </details> 
+            <br>
+            <br>
+
+            <center>
+            <a href="https://rapidapi.com/">API Resource: Rapidapi</a>
+            </center>
+            <br>
+            <br>
+        </div>
+
+        <p style="text-align: center;color: white;">Build by Jafory | Using HTML, CSS, Javascript & Rapidapi</p>
+    </div>
+
+    <script src='js/api.js'></script>
+    <script>
+        var d = new Date();
+        document.getElementById("today").innerHTML = d;
+    </script>
+
+    <!--
+
+    <script>
+        var yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+document.getElementById("yesterday").innerHTML = yesterday;
+    </script>
+-->
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    
+   
+
+
+
+</body>
+
+</html>
